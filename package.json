@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-inline-react-es6-modulepath",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Babel transform to add a static property modulePath containing path to the current module",
   "repository": {
     "type": "git",
