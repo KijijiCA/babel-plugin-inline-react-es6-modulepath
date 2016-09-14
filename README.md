@@ -27,7 +27,7 @@ or with options:
 ```js
 {
   "plugins": [
-        ["transform-react-es6-displayname", {stripCwd: true, stripExtensions: true}]
+        ["transform-react-es6-displayname", {stripCwd: true, stripExtension: true}]
     ]
 }
 ```
@@ -48,7 +48,7 @@ require("babel-core").transform("code", {
 
 ## Options
 - `stripCwd` [boolean] - Whether to strip current working folder from `modulePath` (cwd is from `process.cwd()`)
-- `stripExtensions` [boolean] - Whether to strip extensions from `modulePath`
+- `stripExtension` [boolean] - Whether to strip extensions from `modulePath`
 
 ## Development
 
