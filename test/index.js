@@ -18,7 +18,7 @@ describe('Plugin adds a modulePath entry based on the filepath as a static prope
 
       const expected = fs.readFileSync(
           path.join(fixtureDir, 'expected.js')
-      ).toString();
+      ).toString().replace('${fixtureDir}', fixtureDir);
 
       assert.equal(trim(actual), trim(expected));
     });
