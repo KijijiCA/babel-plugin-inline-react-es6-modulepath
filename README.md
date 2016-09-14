@@ -1,4 +1,4 @@
-# babel-plugin-inline-react-es6-modulepath
+# babel-plugin-inline-react-es6-modulepath [![Build Status](https://travis-ci.org/KijijiCA/babel-plugin-inline-react-es6-modulepath.svg?branch=master)](https://travis-ci.org/KijijiCA/babel-plugin-inline-react-es6-modulepath)
 
 Add `modulePath` to React components instantiated in ES6 style inheriting from React.Component (ex: `class ComponentName extends React.Component` or `class ComponentName extends React.Component`).
 
