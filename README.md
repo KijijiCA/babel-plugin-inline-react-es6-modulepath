@@ -1,40 +1,13 @@
-Read babel plugin handbook -> https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md
+# babel-plugin-inline-react-es6-modulepath
 
-Try http://astexplorer.net/#/Pcw9baefXI for a visual understanding.
+Add `modulePath` to React components instantiated in ES6 style inheriting from React.Component (ex: `class ComponentName extends React.Component` or `class ComponentName extends React.Component`).
 
-# babel-plugin-boilerplate
-
-Add a description for the plugin here
-
-## Example
-
-**In**
-
-```js
-let tips = [
-  "Paste or drop some JavaScript here and explore the syntax tree created by chosen parser.",
-  "You can use all the cool new features from ES6 and even more. Enjoy!"
-];
-
-function printTips() {
-  tips.forEach((tip, i) => console.log(`Tip ${i}:` + tip));
-}
-```
-
-**Out**
-
-```js
-let spit = ["Paste or drop some JavaScript here and explore the syntax tree created by chosen parser.", "You can use all the cool new features from ES6 and even more. Enjoy!"];
-
-function spiTtnirp() {
-  spit.hcaErof((pit, i) => elosnoc.gol(`Tip ${ i }:` + pit));
-}
-```
+`modulePath` represents the modules location on the filesystem. Good as an alternative to React `displayName`, when name collisions are likely.
 
 ## Installation
 
 ```sh
-$ npm install babel-plugin-boilerplate
+$ npm install babel-plugin-transform-react-es6-displayname
 ```
 
 ## Usage
@@ -43,22 +16,43 @@ $ npm install babel-plugin-boilerplate
 
 **.babelrc**
 
-```json
+```js
 {
-  "plugins": ["boilerplate"]
+  "plugins": ["transform-react-es6-displayname"]
+}
+```
+
+or with options:
+
+```js
+{
+  "plugins": [
+        ["transform-react-es6-displayname", {stripCwd: true, stripExtensions: true}]
+    ]
 }
 ```
 
 ### Via CLI
 
 ```sh
-$ babel --plugins boilerplate script.js
+$ babel --plugins transform-react-es6-displayname script.js
 ```
 
 ### Via Node API
 
 ```javascript
 require("babel-core").transform("code", {
-  plugins: ["boilerplate"]
+  plugins: ["transform-react-es6-displayname"]
 });
 ```
+
+## Options
+- `stripCwd` [boolean] - Whether to strip current working folder from `modulePath` (cwd is from `process.cwd()`)
+- `stripExtensions` [boolean] - Whether to strip extensions from `modulePath`
+
+## Development
+
+Read babel plugin handbook -> https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md
+
+### Tests
+To run tests, run `npm test` or `npm test watch`

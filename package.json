@@ -1,8 +1,12 @@
 {
-  "version": "0.0.0",
-  "description": "Add a description for the plugin here",
-  "repository": "supreetpal/babel-plugin-boilerplate",
-  "author": "supreetpal <supreetpal@gmail.com>",
+  "name": "babel-plugin-inline-react-es6-modulepath",
+  "version": "0.0.1",
+  "description": "Babel transform to add a static property modulePath containing path to the current module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KijijiCA/babel-plugin-inline-react-es6-modulepath.git"
+  },
+  "author": "Dmitri Farkov <dmitri.farkov@gmail.com> (http://github.com/dmitrif)",
   "main": "lib/index.js",
   "devDependencies": {
     "babel-cli": "^6.9.0",
@@ -18,10 +22,14 @@
     "test:watch": "npm run test -- --watch",
     "prepublish": "npm run clean && npm run build"
   },
+  "license": "MIT",
   "keywords": [
     "babel",
-    "plugin",
-    "boilerplate",
-    "babel-plugin"
+    "babel-plugin",
+    "transform",
+    "es6",
+    "classes",
+    "react",
+    "modulePath"
   ]
 }
